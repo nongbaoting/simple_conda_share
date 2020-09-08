@@ -3,6 +3,7 @@
 a python script that produce a concise conda environment file contain only the main packages name and version 
 
 `conda env export` export all environment packages
+
 `conda env export  --from-history ` export user manually installed package names in history but may miss package version
 
 my python script is able to export user manually installed package names in history and specific package version
