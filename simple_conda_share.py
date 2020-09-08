@@ -50,7 +50,7 @@ class Conda_Share:
                     pk_s_ = pk_s.split("=")[0]
                     if pk_s_ == pk_f_arr[0] :
                         new_dependecy.append(pk_f_s)
-                        print(pk_f_s)
+                        # print(pk_f_s)
             elif isinstance(pk_f, dict):
                 new_dependecy.append(pk_f)
 
@@ -73,8 +73,8 @@ class Conda_Share:
                         fo.write('    - ' + pk_pip + '\n')
                         
 
-            print('complete !\n create new environment with command:\n')
-            print(f'conda env create -n {self.env_name} -f {self.env_name}.simple_conda_share.yml')
+            print('complete !\nyout can create new environment with command:\n')
+            print(f'conda env create -n {self.env_name} -f {self.env_name}.simple_conda_share.yml\n')
 
 def main(env_name):
     conda_share = Conda_Share(env_name)
