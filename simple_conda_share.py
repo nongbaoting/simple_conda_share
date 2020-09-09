@@ -58,8 +58,8 @@ class Conda_Share:
         new_dat['channels'] =''
         if "prefix" in new_dat:
             del new_dat['prefix']
-
-        with open(f'{self.env_name}.simple.yml', 'w') as fo:
+        fi_yml = f'{self.env_name}.simple.yml'
+        with open(fi_yml, 'w') as fo:
             fo.write('name: ' + self.env_name + '\n' )
             fo.write("channels:\n")
             fo.write('dependencies:\n')
@@ -73,7 +73,7 @@ class Conda_Share:
                         
 
             print('complete !\nyout can create new environment with command:\n')
-            print(f'conda env create -n {self.env_name} -f {self.env_name}.simple_conda_share.yml\n')
+            print(f'conda env create -n {self.env_name} -f {fi_yml}\n')
 
 def main(env_name):
     conda_share = Conda_Share(env_name)
