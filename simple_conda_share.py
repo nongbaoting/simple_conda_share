@@ -9,7 +9,6 @@
 
 import os, re, fire, json
 
-from numpy.lib.arraysetops import unique
 
 class Conda_Share:
 
@@ -60,7 +59,7 @@ class Conda_Share:
         if "prefix" in new_dat:
             del new_dat['prefix']
 
-        with open(f'{self.env_name}.simple_conda_share.yml', 'w') as fo:
+        with open(f'{self.env_name}.simple.yml', 'w') as fo:
             fo.write('name: ' + self.env_name + '\n' )
             fo.write("channels:\n")
             fo.write('dependencies:\n')
